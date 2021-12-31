@@ -18,7 +18,6 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public List<User> getUsers() {
-        // TODO: A modifier
         return users;
     }
 
@@ -28,10 +27,6 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public void generateRandomUser() {
-        // TODO: A modifier
-
-        //double randomIndex = Math.random() * FAKE_USERS_RANDOM.size();
-        //User user = FAKE_USERS_RANDOM.get((int) randomIndex);
 
         int randomIndex = new Random().nextInt(FAKE_USERS_RANDOM.size());
         User user = FAKE_USERS_RANDOM.get(randomIndex);
@@ -43,17 +38,9 @@ public class FakeApiService implements ApiService {
      */
     @Override
     public void deleteUser(User user) {
-        // TODO: A modifier
 
         users.remove(user);
 
-        //int indexEnd = users.size() - 1;
-        //for (int index = 0; index <= indexEnd; index++) {
-        //    if (user == users.get(index)) {
-        //        users.remove(index);
-        //        break;
-        //    }
-        //}
 
     }
 }
