@@ -30,11 +30,11 @@ public class FakeApiService implements ApiService {
     public void generateRandomUser() {
         // TODO: A modifier
 
-        //double randomIndex = Math.random() * FAKE_USERS_RANDOM.size();
-        //User user = FAKE_USERS_RANDOM.get((int) randomIndex);
+        double randomIndex = Math.random() * FAKE_USERS_RANDOM.size();
+        User user = FAKE_USERS_RANDOM.get((int) randomIndex);
 
-        int randomIndex = new Random().nextInt(FAKE_USERS_RANDOM.size());
-        User user = FAKE_USERS_RANDOM.get(randomIndex);
+        //int randomIndex = new Random().nextInt(FAKE_USERS_RANDOM.size());
+        //User user = FAKE_USERS_RANDOM.get(randomIndex);
         users.add(user);
     }
 
@@ -45,15 +45,15 @@ public class FakeApiService implements ApiService {
     public void deleteUser(User user) {
         // TODO: A modifier
 
-        users.remove(user);
+        //users.remove(user);
 
-        //int indexEnd = users.size() - 1;
-        //for (int index = 0; index <= indexEnd; index++) {
-        //    if (user == users.get(index)) {
-        //        users.remove(index);
-        //        break;
-        //    }
-        //}
+        int indexEnd = users.size() - 1;
+        for (int index = 0; index <= indexEnd; index++) {
+            if (user == users.get(index)) {
+                users.remove(index);
+                break;
+            }
+        }
 
     }
 }
